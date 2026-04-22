@@ -1,0 +1,10 @@
+type="email" → Ô nhập text, trình duyệt kiểm tra có định dạng email (phải có @ và domain hợp lệ) → Dùng cho form đăng ký / đăng nhập tài khoản
+type="password" → Ô nhập text nhưng ký tự bị ẩn (•••••) → Không có validation mặc định (trừ khi thêm minlength, pattern) → Dùng cho nhập mật khẩu khi đăng nhập / thanh toán
+type="number" → Ô nhập số, có nút tăng/giảm (spinner) → Chỉ cho nhập số, có thể giới hạn min, max → Dùng chọn số lượng sản phẩm
+type="tel" → Ô nhập số điện thoại → Không validation chặt (vì số điện thoại đa dạng), nhưng hỗ trợ bàn phím số trên mobile → Dùng nhập số điện thoại giao hàng
+type="url" → Ô nhập link → Kiểm tra định dạng URL (phải có http/https) → Dùng nhập link website (ví dụ seller đăng shop)
+type="date" → Bộ chọn ngày (calendar picker) → Kiểm tra định dạng ngày hợp lệ → Dùng chọn ngày giao hàng / ngày sinh khách hàng
+type="time" → Bộ chọn giờ → Kiểm tra định dạng giờ hợp lệ → Dùng chọn khung giờ nhận hàng
+type="range" → Thanh kéo (slider) → Giá trị trong khoảng min → max → Dùng lọc giá sản phẩm (ví dụ: 100k–1 triệu)
+type="checkbox" → Ô tick vuông, chọn được nhiều → Không validation mặc định (trừ required) → Dùng chọn nhiều sản phẩm / đồng ý điều khoản
+type="radio" → Nút tròn, chỉ chọn 1 trong nhóm → Validation khi dùng required → Dùng chọn phương thức thanh toán (COD / chuyển khoản / ví điện tử)
