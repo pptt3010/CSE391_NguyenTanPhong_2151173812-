@@ -1,0 +1,26 @@
+1.
+<input type="text" required value=""> ->  Không submit
+-> Vì required bắt buộc phải nhập, giá trị đang rỗng nên browser chặn
+
+2.
+<input type="email" value="abc"> ->  Không submit
+-> Vì "abc" không đúng định dạng email (thiếu @ và domain)
+
+3.
+<input type="number" min="1" max="10" value="15"> ->  Không submit
+-> Vì 15 vượt quá max=10 nên vi phạm giới hạn
+
+4.
+<input type="text" pattern="[0-9]{10}" value="abc123"> ->  Không submit
+-> Vì pattern yêu cầu đúng 10 chữ số, nhưng "abc123" vừa có chữ vừa thiếu số
+
+5.
+<input type="password" minlength="8" value="123"> ->  Không submit
+-> Vì độ dài < 8 ký tự nên không đạt minlength
+
+
+  https://prnt.sc/ugSNgQbdvJ7B
+  https://prnt.sc/Kmj-eZWBzhUZ
+  https://prnt.sc/Dg2-7RZBZ_eQ
+  https://prnt.sc/ZNnlxKosTO0d
+  
