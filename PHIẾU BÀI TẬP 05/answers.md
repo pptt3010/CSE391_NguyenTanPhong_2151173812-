@@ -203,3 +203,165 @@ Font size có thay đổi không?
 Có
 Font lớn và dễ đọc hơn mobile
 
+
+
+Câu 2C:
+1. Mobile Layout (< 768px)
+Wireframe
+┌────────────────────┐
+│ LOGO   ☰   PHONE   │
+├────────────────────┤
+│                    │
+│    HERO IMAGE      │
+│                    │
+├────────────────────┤
+│    FOOD IMAGE 1    │
+├────────────────────┤
+│    FOOD IMAGE 2    │
+├────────────────────┤
+│    FOOD IMAGE 3    │
+├────────────────────┤
+│    FOOD IMAGE 4    │
+├────────────────────┤
+│    FOOD IMAGE 5    │
+├────────────────────┤
+│    FOOD IMAGE 6    │
+├────────────────────┤
+│   BOOKING FORM     │
+│                    │
+├────────────────────┤
+│    GOOGLE MAP      │
+├────────────────────┤
+│      FOOTER        │
+└────────────────────┘
+Mobile: Những gì bị ẩn?
+Navigation menu đầy đủ bị ẩn
+Chỉ hiện hamburger ☰
+Một số text phụ có thể bị ẩn
+Form nằm đâu?
+Form đặt bàn nằm dưới grid món ăn
+Hiển thị full width 1 cột
+2. Tablet Layout (768px - 1023px)
+Wireframe
+┌──────────────────────────────┐
+│ LOGO      MENU      PHONE    │
+├──────────────────────────────┤
+│                              │
+│         HERO IMAGE           │
+│                              │
+├────────────┬─────────────────┤
+│ FOOD 1     │ FOOD 2          │
+├────────────┼─────────────────┤
+│ FOOD 3     │ FOOD 4          │
+├────────────┼─────────────────┤
+│ FOOD 5     │ FOOD 6          │
+├──────────────────────────────┤
+│        BOOKING FORM          │
+├──────────────────────────────┤
+│         GOOGLE MAP           │
+├──────────────────────────────┤
+│           FOOTER             │
+└──────────────────────────────┘
+Tablet: Grid ảnh mấy cột?
+2 cột
+Bản đồ nằm đâu?
+Nằm dưới form đặt bàn
+Chiếm toàn chiều ngang
+3. Desktop Layout (≥ 1024px)
+Wireframe
+┌────────────────────────────────────────────┐
+│ LOGO      NAVIGATION        PHONE          │
+├────────────────────────────────────────────┤
+│                                            │
+│               HERO IMAGE                   │
+│                                            │
+├─────────────────┬──────────────────────────┤
+│                 │                          │
+│   FOOD GRID     │      BOOKING FORM        │
+│    3 COLUMNS    │                          │
+│                 │                          │
+├─────────────────┴──────────────────────────┤
+│               GOOGLE MAP                   │
+├────────────────────────────────────────────┤
+│                  FOOTER                    │
+└────────────────────────────────────────────┘
+Desktop: Layout bao nhiêu cột?
+Layout chính: 2 cột
+Grid món ăn: 3 cột
+Sidebar có không?
+Không cần sidebar riêng
+Form đặt bàn đóng vai trò cột bên phải
+4. CSS Skeleton (Mobile-First)
+/* MOBILE FIRST */
+
+body {
+    margin: 0;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HERO */
+
+.hero {
+    width: 100%;
+}
+
+/* FOOD GRID */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* BOOKING FORM */
+
+.booking-form {
+    width: 100%;
+}
+
+/* MAP */
+
+.map {
+    width: 100%;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+}
+
+/* ======================= */
+/* TABLET */
+/* ======================= */
+
+@media (min-width: 768px) {
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ======================= */
+/* DESKTOP */
+/* ======================= */
+
+@media (min-width: 1024px) {
+
+    .main-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
