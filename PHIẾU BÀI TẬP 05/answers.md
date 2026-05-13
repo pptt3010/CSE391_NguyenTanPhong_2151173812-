@@ -1,3 +1,5 @@
+Phần A:
+
 Câu A1: Viewport & Mobile-First
 1. Thẻ <meta viewport> chuẩn
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,4 +98,108 @@ màn hình rất lớn
 Ví dụ lưới sản phẩm:
 5 hoặc 6 cột
 
+
+
+
+
+Phần C:
+Câu C1 — Phân tích trang web thực
+Website được chọn: YouTube
+1. Mobile (375px)
+Quan sát
+Header nhỏ gọn
+Chỉ hiện logo, search icon và avatar
+Sidebar bị ẩn
+Video hiển thị 1 cột
+Font nhỏ hơn desktop
+Khoảng cách giữa các phần tử hẹp hơn
+Giải thích
+
+YouTube dùng:
+
+responsive design
+Mobile-First layout
+
+Mục tiêu:
+
+tối ưu cho màn hình nhỏ
+dễ thao tác bằng ngón tay
+2. Tablet (768px)
+Quan sát
+Header rộng hơn
+Thanh tìm kiếm lớn hơn
+Sidebar thu gọn dạng icon
+Video hiển thị khoảng 2 cột
+Khoảng cách giữa các card lớn hơn mobile
+Giải thích
+
+Tablet có màn hình lớn hơn nên:
+
+hiển thị thêm nội dung
+tăng số cột video
+cải thiện trải nghiệm xem
+3. Desktop (1440px)
+Quan sát
+Sidebar hiện đầy đủ
+Thanh navigation ngang đầy đủ
+Video hiển thị nhiều cột (4–5 cột)
+Nội dung rộng toàn màn hình
+Font và thumbnail lớn hơn
+Giải thích
+
+Desktop ưu tiên:
+
+hiển thị nhiều nội dung cùng lúc
+tận dụng không gian lớn
+hỗ trợ thao tác chuột và bàn phím
+
+<img width="1901" height="937" alt="image" src="https://github.com/user-attachments/assets/aae7347e-c603-4b9b-8f28-e7391afe878c" />
+
+<img width="1253" height="583" alt="image" src="https://github.com/user-attachments/assets/28844a0d-e010-4fc6-835c-667da70bd113" />
+
+<img width="463" height="750" alt="image" src="https://github.com/user-attachments/assets/d7647c2a-13b7-4621-b03a-f3bbcd7666d4" />
+
+
+2.
+1. Mobile (375px)
+Navigation thay đổi thế nào?
+Header nhỏ gọn hơn
+Sidebar bị ẩn
+Navigation chuyển sang hamburger menu ☰
+Thanh search thu nhỏ thành icon
+Lưới content thay đổi mấy cột?
+Video hiển thị 1 cột
+Elements nào bị ẩn trên mobile?
+Sidebar đầy đủ
+Một số text menu
+Nhiều nút chức năng trên header
+Font size có thay đổi không?
+Có
+Font nhỏ hơn desktop để phù hợp màn hình nhỏ
+2. Tablet (768px)
+Navigation thay đổi thế nào?
+Hamburger vẫn còn
+Sidebar thu gọn dạng icon
+Thanh search dài hơn mobile
+Lưới content thay đổi mấy cột?
+Khoảng 2 cột video
+Elements nào bị ẩn?
+Sidebar chưa hiện đầy đủ text
+Một số menu phụ vẫn được thu gọn
+Font size có thay đổi không?
+Có
+Font lớn hơn mobile nhưng nhỏ hơn desktop
+3. Desktop (1440px)
+Navigation thay đổi thế nào?
+Sidebar hiện đầy đủ
+Menu ngang đầy đủ
+Không cần giao diện tối giản như mobile
+Lưới content thay đổi mấy cột?
+Khoảng 4–5 cột video
+Elements nào bị ẩn?
+Hầu như không ẩn
+Hiển thị đầy đủ chức năng
+Font size có thay đổi không?
+Có
+Font lớn và dễ đọc hơn mobile
 
