@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container"> <a class="navbar-brand fw-bold" href="#"> ShopNow </a> <button class="navbar-toggler"
+                type="button" data-bs-toggle="collapse" data-bs-target="#menu"> <span
+                    class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"> <a class="nav-link active" href="#"> Trang chủ </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Sản phẩm </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Khuyến mãi </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Liên hệ </a> </li>
+                </ul>
+                <form class="d-flex me-3"> <input class="form-control me-2" type="search" placeholder="Tìm kiếm">
+                    <button class="btn btn-outline-light"> Search </button> </form> <button class="btn btn-warning"> 🛒
+                    Cart </button>
+            </div>
+        </div>
+    </nav> <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active"> <img src="https://picsum.photos/1200/500?1"
+                    class="d-block w-100 img-fluid">
+                <div class="carousel-caption">
+                    <h1 class="fw-bold"> Bộ sưu tập mới </h1>
+                    <p> Khám phá xu hướng thời trang </p> <button class="btn btn-primary"> Mua ngay </button>
+                </div>
+            </div>
+            <div class="carousel-item"> <img src="https://picsum.photos/1200/500?2" class="d-block w-100 img-fluid">
+                <div class="carousel-caption">
+                    <h1 class="fw-bold"> Sale đến 50% </h1>
+                    <p> Nhanh tay săn ưu đãi </p> <button class="btn btn-danger"> Xem thêm </button>
+                </div>
+            </div>
+            <div class="carousel-item"> <img src="https://picsum.photos/1200/500?3" class="d-block w-100 img-fluid">
+                <div class="carousel-caption">
+                    <h1 class="fw-bold"> Miễn phí vận chuyển </h1>
+                    <p> Áp dụng toàn quốc </p> <button class="btn btn-success"> Khám phá </button>
+                </div>
+            </div>
+        </div> <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+            data-bs-slide="prev"> <span class="carousel-control-prev-icon"></span> </button> <button
+            class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"> <span
+                class="carousel-control-next-icon"></span> </button>
+    </div> <!-- Product Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold"> Sản phẩm nổi bật </h2>
+            <div class="row g-4"> <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100"> <span class="badge bg-danger position-absolute top-0 end-0 m-2"> Sale
+                        </span> <img src="https://picsum.photos/300/250?4" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"> Áo Hoodie </h5>
+                            <p class="card-text"> Thiết kế trẻ trung năng động. </p> <button class="btn btn-primary"
+                                data-bs-toggle="modal" data-bs-target="#productModal"> Xem nhanh </button>
+                        </div>
+                    </div>
+                </div> <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100"> <span class="badge bg-danger position-absolute top-0 end-0 m-2"> Sale
+                        </span> <img src="https://picsum.photos/300/250?5" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"> Giày Sneaker </h5>
+                            <p class="card-text"> Phù hợp mọi phong cách. </p> <button class="btn btn-primary"
+                                data-bs-toggle="modal" data-bs-target="#productModal"> Xem nhanh </button>
+                        </div>
+                    </div>
+                </div> <!-- Card 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100"> <span class="badge bg-danger position-absolute top-0 end-0 m-2"> Sale
+                        </span> <img src="https://picsum.photos/300/250?6" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"> Đồng hồ </h5>
+                            <p class="card-text"> Sang trọng và hiện đại. </p> <button class="btn btn-primary"
+                                data-bs-toggle="modal" data-bs-target="#productModal"> Xem nhanh </button>
+                        </div>
+                    </div>
+                </div> <!-- Card 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100"> <span class="badge bg-danger position-absolute top-0 end-0 m-2"> Sale
+                        </span> <img src="https://picsum.photos/300/250?7" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"> Túi xách </h5>
+                            <p class="card-text"> Chất liệu cao cấp. </p> <button class="btn btn-primary"
+                                data-bs-toggle="modal" data-bs-target="#productModal"> Xem nhanh </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- Modal -->
+    <div class="modal fade" id="productModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Chi tiết sản phẩm </h5> <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body"> <img src="https://picsum.photos/500/250" class="img-fluid rounded mb-3">
+                    <h4> Áo Hoodie Premium </h4>
+                    <p> Sản phẩm chất lượng cao, thiết kế hiện đại dành cho giới trẻ. </p>
+                    <h5 class="text-danger"> 499.000đ </h5>
+                </div>
+                <div class="modal-footer"> <button class="btn btn-secondary" data-bs-dismiss="modal"> Đóng </button>
+                    <button class="btn btn-success"> Thêm vào giỏ </button> </div>
+            </div>
+        </div>
+    </div> <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5> ShopNow </h5>
+                    <p> Website thương mại điện tử. </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5> Liên kết </h5>
+                    <ul class="list-unstyled">
+                        <li>Trang chủ</li>
+                        <li>Sản phẩm</li>
+                        <li>Liên hệ</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5> Hỗ trợ </h5>
+                    <ul class="list-unstyled">
+                        <li>FAQ</li>
+                        <li>Bảo hành</li>
+                        <li>Chính sách</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5> Kết nối </h5>
+                    <p>Email: support@gmail.com</p>
+                    <p>Phone: 0123456789</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
