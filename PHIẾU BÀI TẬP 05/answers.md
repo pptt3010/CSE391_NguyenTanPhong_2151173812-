@@ -208,32 +208,8 @@ Font lớn và dễ đọc hơn mobile
 Câu 2C:
 1. Mobile Layout (< 768px)
 Wireframe
-┌────────────────────┐
-│ LOGO   ☰   PHONE   │
-├────────────────────┤
-│                    │
-│    HERO IMAGE      │
-│                    │
-├────────────────────┤
-│    FOOD IMAGE 1    │
-├────────────────────┤
-│    FOOD IMAGE 2    │
-├────────────────────┤
-│    FOOD IMAGE 3    │
-├────────────────────┤
-│    FOOD IMAGE 4    │
-├────────────────────┤
-│    FOOD IMAGE 5    │
-├────────────────────┤
-│    FOOD IMAGE 6    │
-├────────────────────┤
-│   BOOKING FORM     │
-│                    │
-├────────────────────┤
-│    GOOGLE MAP      │
-├────────────────────┤
-│      FOOTER        │
-└────────────────────┘
+<img width="150" height="467" alt="image" src="https://github.com/user-attachments/assets/d1701f28-7b6c-4aa6-b280-119378d35c61" />
+
 Mobile: Những gì bị ẩn?
 Navigation menu đầy đủ bị ẩn
 Chỉ hiện hamburger ☰
@@ -243,25 +219,8 @@ Form đặt bàn nằm dưới grid món ăn
 Hiển thị full width 1 cột
 2. Tablet Layout (768px - 1023px)
 Wireframe
-┌──────────────────────────────┐
-│ LOGO      MENU      PHONE    │
-├──────────────────────────────┤
-│                              │
-│         HERO IMAGE           │
-│                              │
-├────────────┬─────────────────┤
-│ FOOD 1     │ FOOD 2          │
-├────────────┼─────────────────┤
-│ FOOD 3     │ FOOD 4          │
-├────────────┼─────────────────┤
-│ FOOD 5     │ FOOD 6          │
-├──────────────────────────────┤
-│        BOOKING FORM          │
-├──────────────────────────────┤
-│         GOOGLE MAP           │
-├──────────────────────────────┤
-│           FOOTER             │
-└──────────────────────────────┘
+<img width="222" height="347" alt="image" src="https://github.com/user-attachments/assets/9c5b7cea-bb23-4464-bcba-8726553a688a" />
+
 Tablet: Grid ảnh mấy cột?
 2 cột
 Bản đồ nằm đâu?
@@ -269,22 +228,8 @@ Nằm dưới form đặt bàn
 Chiếm toàn chiều ngang
 3. Desktop Layout (≥ 1024px)
 Wireframe
-┌────────────────────────────────────────────┐
-│ LOGO      NAVIGATION        PHONE          │
-├────────────────────────────────────────────┤
-│                                            │
-│               HERO IMAGE                   │
-│                                            │
-├─────────────────┬──────────────────────────┤
-│                 │                          │
-│   FOOD GRID     │      BOOKING FORM        │
-│    3 COLUMNS    │                          │
-│                 │                          │
-├─────────────────┴──────────────────────────┤
-│               GOOGLE MAP                   │
-├────────────────────────────────────────────┤
-│                  FOOTER                    │
-└────────────────────────────────────────────┘
+<img width="292" height="286" alt="image" src="https://github.com/user-attachments/assets/efb19f47-c3d7-48a4-94df-2d6204ccabd8" />
+
 Desktop: Layout bao nhiêu cột?
 Layout chính: 2 cột
 Grid món ăn: 3 cột
