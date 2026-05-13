@@ -1,3 +1,4 @@
+Phần A:
 Câu A1 — Grid System
 1. Layout ở từng kích thước màn hình
 2.
@@ -185,3 +186,114 @@ Tóm tắt:
 .container-md
 → Full width ở mobile, fixed width từ md trở lên.
 
+
+
+Phần C:
+1. Đổi màu $primary sang #E63946
+
+Để đổi màu mặc định của Bootstrap cần dùng Sass/SCSS.
+
+Các bước:
+
+Cài Bootstrap và Sass bằng npm:
+npm install bootstrap
+npm install sass
+Tạo file custom.scss
+$primary: #E63946;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+Compile SCSS sang CSS:
+sass custom.scss custom.css
+Link file custom.css vào HTML.
+
+Sau khi build lại thì các class như:
+
+btn-primary
+bg-primary
+text-primary
+
+sẽ đổi sang màu mới.
+
+2. Tại sao không nên override trực tiếp .btn-primary?
+
+Ví dụ:
+
+.btn-primary{
+    background:red;
+}
+
+Cách này chỉ đổi màu button, còn các class khác như:
+
+bg-primary
+alert-primary
+text-primary
+
+vẫn giữ màu cũ.
+
+Ngoài ra còn:
+
+khó bảo trì
+dễ bị ghi đè CSS
+không đồng bộ giao diện
+
+Dùng Sass variables sẽ giúp Bootstrap tự generate lại toàn bộ theme đồng nhất hơn.
+
+Câu C2 (10đ) — So sánh
+
+Ví dụ CSS thuần:
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    background:#222;
+    padding:15px;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    width:250px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.card img{
+    width:100%;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+}
+
+So sánh với Bootstrap:
+
+1. Số dòng CSS
+CSS thuần: phải tự viết nhiều.
+Bootstrap: ít viết CSS hơn vì có class sẵn.
+2. Thời gian phát triển
+CSS thuần: lâu hơn.
+Bootstrap: nhanh hơn vì có grid, navbar, card,...
+3. Khả năng tùy biến
+CSS thuần: tùy biến cao.
+Bootstrap: nhanh nhưng dễ bị giống template.
+4. Khi nào nên dùng Bootstrap?
+
+Nên dùng:
+
+làm bài tập
+admin dashboard
+prototype nhanh
+deadline ngắn
+
+Không nên dùng:
+
+UI quá đặc biệt
+cần custom mạnh
+cần design riêng hoàn toàn
