@@ -162,3 +162,59 @@ không chạy JavaScript.
   + chỉ xử lý text
   + an toàn hơn
   + nên dùng khi hiển thị dữ liệu từ user
+
+
+Câu A3
+
+1. Khi click vào button
+
+Thứ tự output:
+
+BUTTON
+INNER
+OUTER
+
+-----------------------------------
+
+2. Giải thích
+
+Sự kiện click xảy ra ở button trước,
+sau đó nổi bọt (event bubbling) lên các phần tử cha.
+
+Thứ tự:
+
+button
+→ div#inner
+→ div#outer
+
+Nên console.log chạy theo thứ tự:
+
+BUTTON
+INNER
+OUTER
+
+-----------------------------------
+
+3. Nếu uncomment:
+
+e.stopPropagation();
+
+Code:
+
+document.querySelector("#btn").addEventListener("click", (e) => {
+    console.log("BUTTON");
+    e.stopPropagation();
+});
+
+Thì output:
+
+BUTTON
+
+-----------------------------------
+
+4. Giải thích
+
+stopPropagation() sẽ chặn event bubbling.
+
+Sự kiện chỉ chạy ở button,
+không nổi bọt lên inner và outer nữa.
