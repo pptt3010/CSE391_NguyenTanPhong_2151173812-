@@ -1,0 +1,80 @@
+<!-- keyboard_app/index.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Gallery Keyboard Navigation</h1>
+
+    <div class="gallery">
+      <button id="prevBtn" aria-label="Ảnh trước">←</button>
+
+      <img
+        id="galleryImage"
+        src="https://picsum.photos/id/1015/700/400"
+        alt="Gallery Image"
+        tabindex="0"
+      >
+
+      <button id="nextBtn" aria-label="Ảnh tiếp theo">→</button>
+    </div>
+
+    <div class="info">
+      <p>
+        ← → chuyển ảnh |
+        1-9 chọn ảnh |
+        Space play/pause |
+        Ctrl + K mở command |
+        Esc đóng
+      </p>
+    </div>
+
+    <div class="controls">
+      <button id="playBtn" aria-label="Bật slideshow">
+        Play Slideshow
+      </button>
+
+      <button id="openCommand" aria-label="Mở command palette">
+        Open Command Palette
+      </button>
+    </div>
+
+  </div>
+
+  <div class="overlay" id="commandOverlay">
+
+    <div class="palette">
+
+      <input
+        type="text"
+        id="commandInput"
+        placeholder="Nhập command..."
+        aria-label="Ô tìm kiếm command"
+      >
+
+      <ul id="commandList"></ul>
+
+    </div>
+
+  </div>
+
+  <div class="modal" id="imageModal">
+
+    <div class="modal-content">
+
+      <img id="modalImage" src="" alt="Modal Image">
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
