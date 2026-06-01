@@ -218,3 +218,125 @@ stopPropagation() sẽ chặn event bubbling.
 
 Sự kiện chỉ chạy ở button,
 không nổi bọt lên inner và outer nữa.
+
+
+
+PHẦN C — DEBUG & PHÂN TÍCH
+
+Câu C1 (8 điểm) – Debug DOM Code
+
+Các lỗi và cách sửa:
+
+1. Sai tên sự kiện ở nút decrement:
+
+addEventListener("onclick", ...)
+
+Sửa thành:
+
+addEventListener("click", ...)
+
+2. Gán sai giá trị cho countDisplay trong hàm reset:
+
+countDisplay = count;
+
+Sửa thành:
+
+countDisplay.textContent = count;
+
+3. countDisplay được khai báo bằng const nên không thể gán lại:
+
+countDisplay = count;
+
+Đây là lỗi vì đang thay đổi tham chiếu của biến.
+
+4. Xóa history chưa đúng:
+
+historyList.innerHTML = null;
+
+Sửa thành:
+
+historyList.innerHTML = "";
+
+5. Xóa tất cả history không hoạt động:
+
+item.remove;
+
+Sửa thành:
+
+item.remove();
+
+6. Khi lấy dữ liệu từ localStorage:
+
+count = localStorage.getItem("count");
+
+Giá trị trả về là chuỗi nên cần ép kiểu:
+
+count = Number(localStorage.getItem("count")) || 0;
+
+7. Chưa khôi phục danh sách history từ localStorage khi tải lại trang.
+
+Thêm:
+
+historyList.innerHTML = localStorage.getItem("history") || "";
+
+8. Sau khi khôi phục history từ localStorage, các thẻ li không còn sự kiện click để xóa. Cần gắn lại event hoặc sử dụng Event Delegation.
+
+9. Nên dùng:
+
+historyList.appendChild(li);
+
+thay vì:
+
+historyList.append(li);
+
+để tương thích tốt hơn.
+
+Câu C2 (7 điểm) – Performance
+
+Việc gắn event listener cho 1000 phần tử riêng lẻ là bad practice vì:
+
+* Tạo ra 1000 event listener trong bộ nhớ.
+* Tốn RAM và CPU.
+* Làm giảm hiệu năng khi số lượng phần tử lớn.
+* Khó bảo trì và quản lý code.
+* Khi thêm phần tử mới phải gắn listener lại.
+
+Event Delegation giải quyết bằng cách chỉ gắn một event listener lên phần tử cha. Khi người dùng tương tác với phần tử con, sự kiện sẽ bubbling lên phần tử cha và được xử lý thông qua event.target.
+
+Ví dụ:
+
+document.body.addEventListener("click", function(event) {
+    if (event.target.matches(".item")) {
+        console.log(event.target.textContent);
+    }
+});
+
+Code ban đầu:
+
+for (let i = 0; i < 1000; i++) {
+    const div = document.createElement("div");
+    div.textContent = `Item ${i}`;
+    document.body.appendChild(div);
+}
+
+Mỗi lần appendChild() vào DOM có thể gây reflow và repaint. Thực hiện 1000 lần sẽ làm giảm hiệu năng.
+
+Refactor bằng DocumentFragment:
+
+const fragment = document.createDocumentFragment();
+
+for (let i = 0; i < 1000; i++) {
+    const div = document.createElement("div");
+    div.textContent = `Item ${i}`;
+    fragment.appendChild(div);
+}
+
+document.body.appendChild(fragment);
+
+Giải thích:
+
+* Các phần tử được thêm vào DocumentFragment trong bộ nhớ thay vì DOM thật.
+* Trình duyệt không phải tính toán layout liên tục sau mỗi lần thêm phần tử.
+* Chỉ khi append fragment vào document.body mới cập nhật DOM một lần.
+* Giảm số lần reflow và repaint từ khoảng 1000 lần xuống còn 1 lần.
+* Tiết kiệm tài nguyên, tăng tốc độ render và cải thiện hiệu năng của trang web.
