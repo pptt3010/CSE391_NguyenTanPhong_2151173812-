@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        .user-card {
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+        }
+
+        .loading {
+            padding: 15px;
+            background: #eee;
+            margin: 10px 0;
+        }
+
+        #toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: #333;
+            color: white;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Directory</h1>
+
+    <input type="text" id="searchInput" placeholder="Tìm theo tên hoặc email">
+
+    <h3>Thêm / Cập nhật User</h3>
+
+    <form id="userForm">
+        <input type="text" id="name" placeholder="Tên" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Lưu</button>
+    </form>
+
+    <div id="loading"></div>
+    <div id="users"></div>
+    <div id="toast"></div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
